@@ -5,7 +5,7 @@ Crea una tabla con 10 servicios reales. Incluye enlace oficial y justifica respo
 
 | Servicio | Proveedor | Nivel (IaaS/PaaS/SaaS) | Enlace oficial | ¿Qué gestiona el proveedor? | ¿Qué gestiona el equipo/usuario? |
 |---------|----------|-------------------------|----------------|-----------------------------|----------------------------------|
-|         |          |                         |                |                             |                                  |
+| HOLA        |          |                         |                |                             |                                  |
 
 ## 🅱️ Tarea B — Funciones principales de cloud (arquitectura)
 Incluye un diagrama (ASCII/Mermaid/imagen) y una explicación breve.
