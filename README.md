@@ -20,16 +20,33 @@ Crea una tabla con 10 servicios reales. Incluye enlace oficial y justifica respo
 Incluye un diagrama (ASCII/Mermaid/imagen) y una explicación breve.
 
 ### Diagrama
-(Pega aquí el diagrama)
+flowchart LR
+    U[Usuario / Navegador] --> F[Frontend Web<br>(WordPress.com)]
+    F --> A[API / Backend Cloud<br>(Funciones + Servicios)]
+    A --> D[(Base de Datos<br>Cloud)]
+    A --> S[(Almacenamiento<br>de Archivos)]
+    D --> A
+    S --> A
+    A --> F
+
 
 ### Explicación (8–12 líneas)
-(Describe el flujo front → API → BBDD/storage y dónde entra la cloud)
-
+El usuario accede a la aplicación desde su navegador, interactuando con el frontend alojado en la nube (por ejemplo, WordPress.com).
+El frontend envía solicitudes HTTP a una API alojada en la infraestructura cloud.
+La API gestiona la lógica de negocio y valida las peticiones recibidas.
+Cuando se requiere información persistente, la API consulta o actualiza la base de datos cloud.
+Los archivos estáticos o multimedia se almacenan en servicios de almacenamiento en la nube.
+La infraestructura cloud permite escalado automático según la carga de usuarios.
+Los servicios cloud garantizan alta disponibilidad y tolerancia a fallos.
+Finalmente, la API devuelve la respuesta procesada al frontend, que la muestra al usuario.
 ### Mapeo de funciones cloud a componentes (mínimo 3)
-- Procesamiento → …
-- Ejecución → …
-- Almacenamiento → …
-- Intercambio → … (opcional si ya tienes 3)
+Procesamiento → Backend cloud que ejecuta la lógica de negocio (servicios gestionados / serverless).
+Ejecución → Plataforma cloud que ejecuta la API y el frontend (entornos gestionados).
+Almacenamiento → Base de datos cloud y almacenamiento de objetos para archivos.
+Intercambio → APIs REST sobre HTTP/HTTPS para la comunicación entre frontend y backend.
 
 ## 📚 Fuentes (enlaces oficiales)
-(Enlaces oficiales usados en la tabla A y en la B)
+https://cloud.google.com/learn/what-is-cloud-computing
+https://aws.amazon.com/what-is-cloud-computing/
+https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/
+https://wordpress.com/support/
